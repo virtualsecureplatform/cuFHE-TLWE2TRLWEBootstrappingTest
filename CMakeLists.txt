@@ -12,8 +12,9 @@ find_package(CUDA)
 
 add_subdirectory(cuFHE/cufhe)
 
-add_executable(tlwe2trlwe testcuFHETRLWElvl.cpp)
+#add_executable(tlwe2trlwe testcuFHETRLWElvl.cpp)
 #add_executable(tlwe2trlwe gbtest.cpp)
+add_executable(tlwe2trlwe SEandKStest.cpp)
 
 target_link_libraries(tlwe2trlwe tfhe++ cufhe_gpu)
 target_include_directories(tlwe2trlwe PRIVATE ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
